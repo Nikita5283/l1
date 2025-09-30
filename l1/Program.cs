@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace l1
 {
@@ -149,16 +150,115 @@ namespace l1
             Console.WriteLine(res_lennum);
 
             //3.7
-            Console.Write("Введите целое число n для вывода квадрата из '*' размером nxn: ");
+            Console.Write("Введите натуральное число n для вывода квадрата из '*' размером nxn: ");
             int size_square = Convert.ToInt32(Console.ReadLine());
 
             class1_obj.square(size_square);
 
             //3.9
-            Console.Write("Введите целое число n для вывода треугольника из '*', прижатого к правой стороне экрана, размером nxn: ");
+            Console.Write("Введите натуральное число n для вывода треугольника из '*', прижатого к правой стороне экрана, размером nxn: ");
             int size_triangle = Convert.ToInt32(Console.ReadLine());
 
             class1_obj.rightTriangle(size_triangle);
+
+            //4.1
+            Console.WriteLine("Сгенерированный массив: ");
+
+            int[] nums = new int[7];
+            Random random = new Random();
+            for (int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = random.Next(100);
+                Console.Write(nums[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.Write("Введите целое для нахождения его индекса в сгенерированном массиве: ");
+            int desired_num = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine(class1_obj.findFirst(nums, desired_num));
+
+            //4.3
+            Console.WriteLine("Сгенерированный массив: ");
+
+            int[] nums2 = new int[7];
+            Random random2 = new Random();
+            for (int i = 0; i < nums2.Length; i++)
+            {
+                nums2[i] = random2.Next(-10, 5);
+                Console.Write(nums2[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.Write(class1_obj.maxAbs(nums2));
+
+            //4.5
+            Console.WriteLine("Массив arr: ");
+
+            int[] arr = new int[7];
+            Random random3 = new Random();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = random3.Next(-10, 5);
+                Console.Write(arr[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Массив ins: ");
+
+            int[] ins = new int[7];
+            Random random4 = new Random();
+            for (int i = 0; i < ins.Length; i++)
+            {
+                ins[i] = random4.Next(-10, 5);
+                Console.Write(ins[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.Write("Введите индекс, для вставки элементов массива ins в массив arr: ");
+            int pos = Convert.ToInt32(Console.ReadLine());
+
+            //4.7
+            Console.WriteLine("Сгенерированный массив: ");
+            int[] nums3 = new int[7];
+            Random random5 = new Random();
+            for (int i = 0; i < nums3.Length; i++)
+            {
+                nums3[i] = random5.Next(-10, 5);
+                Console.Write(nums3[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.WriteLine("Перевернутый массив: ");
+            int[] reverse_arr = class1_obj.reverseBack(nums3);
+            foreach (int n in reverse_arr)
+            {
+                Console.Write(n + " ");
+            }
+            Console.WriteLine();
+
+            //4.9
+            Console.WriteLine("Сгенерированный массив: ");
+            int[] nums4 = new int[7];
+            Random random6 = new Random();
+            for (int i = 0; i < nums4.Length; i++)
+            {
+                nums4[i] = random6.Next(-10, 5);
+                Console.Write(nums3[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.Write("Введите целое число: ");
+            int numm = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Массив индексов вхождений введенного числа: ");
+            int[] inds_arr = class1_obj.findAll(nums4, numm);
+            foreach (int n2 in reverse_arr)
+            {
+                Console.Write(n2 + " ");
+            }
+            Console.WriteLine();
         }
 
 

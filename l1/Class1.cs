@@ -188,5 +188,76 @@ namespace l1
                 Console.WriteLine(line_stars);
             }
         }
+
+        //4.1 Поиск первого значения
+        public int findFirst(int[] arr, int x)
+        {
+            int ind = 0;
+            foreach (int num in arr) {
+                if (num == x) {
+                    return ind;
+                    break;
+                };
+                ind++;
+            }
+            return -1;
+        }
+
+        //4.3 Поиск максимального по модулю
+        public int maxAbs(int[] arr)
+        {
+            int max = 0;
+            foreach (int num in arr)
+            {
+                if (Math.Abs(num) > Math.Abs(max))
+                {
+                    max = num;
+                }
+            }
+            return max;
+        }
+
+        //4.5 Добавление массива в массив
+        public int[] add(int[] arr, int[] ins, int pos)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (i == pos)
+                {
+                    
+                }
+            }
+            return arr;
+        }
+
+        //4.7 Реверс массива
+        public int[] reverseBack(int[] arr)
+        {
+            int len_arr = arr.Length;
+            int[] reverse_arr = new int[len_arr];
+            int j = 0;
+            for (int i = len_arr-1; i >= 0; i--)
+            {
+                reverse_arr[j] = arr[i];
+                j++;
+            }
+            return reverse_arr;
+        }
+
+        //4.9 Индексы всех вхождений
+        public int[] findAll(int[] arr, int x)
+        {
+            int[] inds = new int[arr.Length];
+            int j = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == x)
+                {
+                    inds[i] = j;
+                    j++;
+                }
+            }
+            return inds;
+        }
     }
 }
