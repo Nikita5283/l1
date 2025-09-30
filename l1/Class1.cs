@@ -59,5 +59,82 @@ namespace l1
                 return false;
             }
         }
+
+        //2.1 Безопасное деление
+        public double safeDiv(int x, int y)
+        {
+            if (y == 0)
+            {
+                return 0;
+            } else
+            {
+                return x / y;
+            }
+        }
+
+        //2.3 35
+        public bool is35(int x)
+        {
+            if (x % 3 == 0 && x % 5 == 0)
+            {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        //2.5 Тройной максимум
+        public int max3(int x, int y, int z)
+        {
+            if (x > y && x > z)
+            {
+                return x;
+            }
+            else if (y > x && y > z) {
+                return y;
+            } else
+            {
+                return z;
+            }
+        }
+
+        //2.7 Двойная сумма
+        public int sum2(int x, int y)
+        {
+            int sum = x + y;
+            if (sum >= 10 && sum <= 19)
+            {
+                return 20;
+            } else
+            {
+                return sum;
+            }
+        }
+
+        //2.9 День недели
+        public String day(int x)
+        {
+            switch (x)
+            {
+                case 1: return "Понедельник"; break;
+                case 2: return "Вторник"; break;
+                case 3: return "Среда"; break;
+                case 4: return "Четверг"; break;
+                case 5: return "Пятница"; break;
+                case 6: return "Суббота"; break;
+                case 7: return "Воскресенье"; break;
+                default: return "Это не день недели"; break;
+            }
+        }
+
+        //3.1 Числа подряд
+        public String listNums(int x)
+        {
+            String nums = "";
+            for (int i = 0; i <= x; i++)
+            {
+                nums += i + " ";
+            }
+        }
     }
 }
