@@ -135,6 +135,58 @@ namespace l1
             {
                 nums += i + " ";
             }
+            return nums;
+        }
+
+        //3.3 Четные числа
+        public String chet(int x)
+        {
+            String even_nums = "";
+            for (int i = 0; i <= x; i += 2)
+            {
+                even_nums += i + " ";
+            }
+            return even_nums;
+        }
+
+        //3.5 Длина числа
+        public int numLen(long x)
+        {
+            int len = 0;
+
+            while (x > 0)
+            {
+                x = Convert.ToInt64(x / 10);
+                len += 1;
+            }
+            return len;
+        }
+
+        //3.7 Квадрат
+        public void square(int x)
+        {
+            for (int i = 0; i < x; i++)
+            {
+                String line_stars = "";
+                for (int j = 0; j < x; j++)
+                {
+                    line_stars += "*";
+                }
+                Console.WriteLine(line_stars);
+            }
+        }
+
+        //3.9 Правый треугольник
+        public void rightTriangle(int x)
+        {
+            for (int i = 0; i < x; i ++)
+            {
+                int spaces_num  = x - i;
+                String line_stars = " ";
+                for (int j = 0; j < spaces_num; j++) { line_stars += " "; }
+                for (int k = 0; k < i; k ++) { line_stars += "*"; }
+                Console.WriteLine(line_stars);
+            }
         }
     }
 }
