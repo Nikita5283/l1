@@ -86,11 +86,11 @@ namespace l1
         //2.5 Тройной максимум
         public int max3(int x, int y, int z)
         {
-            if (x > y && x > z)
+            if (x >= y && x >= z)
             {
                 return x;
             }
-            else if (y > x && y > z) {
+            else if (y >= x && y >= z) {
                 return y;
             } else
             {
@@ -220,15 +220,31 @@ namespace l1
         //4.5 Добавление массива в массив
         public int[] add(int[] arr, int[] ins, int pos)
         {
-            for (int i = 0; i < arr.Length; i++)
+            int[] result = new int[arr.Length + ins.Length];
+
+            int k = 0;
+
+            // копируем часть arr до позиции
+            for (int i = 0; i < pos; i++)
             {
-                if (i == pos)
-                {
-                    
-                }
+                result[k++] = arr[i];
             }
-            return arr;
+
+            // вставляем ins
+            for (int i = 0; i < ins.Length; i++)
+            {
+                result[k++] = ins[i];
+            }
+
+            // добавляем остаток arr
+            for (int i = pos; i < arr.Length; i++)
+            {
+                result[k++] = arr[i];
+            }
+
+            return result;
         }
+
 
         //4.7 Реверс массива
         public int[] reverseBack(int[] arr)
@@ -238,8 +254,7 @@ namespace l1
             int j = 0;
             for (int i = len_arr-1; i >= 0; i--)
             {
-                reverse_arr[j] = arr[i];
-                j++;
+                reverse_arr[j++] = arr[i];
             }
             return reverse_arr;
         }
@@ -253,8 +268,7 @@ namespace l1
             {
                 if (arr[i] == x)
                 {
-                    inds[i] = j;
-                    j++;
+                    inds[j++] = i;
                 }
             }
             return inds;
