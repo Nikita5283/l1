@@ -9,10 +9,10 @@ namespace l1
 {
     internal class Class1
     {
-        //1.1 Отбрасывание дробной части числа
+        //1.1 Отбрасывание целой части числа
         public double Fraction(double x)
         {
-            return Convert.ToInt32(x);
+            return x - Convert.ToInt32(x);
         }
 
         //1.3 Преобразование буквы в число

@@ -14,8 +14,8 @@ namespace l1
             Console.WriteLine("1.1");
             Console.Write("Введите вещественное число: ");
             double fr_num = Convert.ToDouble(Console.ReadLine());
-            int res_fraction = Convert.ToInt32(class1_obj.Fraction(fr_num));
-            Console.WriteLine("Целая часть числа: " + res_fraction);
+            double res_fraction = Convert.ToDouble(class1_obj.Fraction(fr_num));
+            Console.WriteLine("Дробная часть числа: " + res_fraction);
 
             //1.3
             Console.WriteLine("1.3");
