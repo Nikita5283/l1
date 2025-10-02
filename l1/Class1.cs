@@ -60,15 +60,16 @@ namespace l1
             }
         }
 
-        //2.1 Безопасное деление
-        public double safeDiv(int x, int y)
+        //2.1 Модуль числа
+        public int abs(int x)
         {
-            if (y == 0)
+            if (x < 0)
             {
-                return 0;
-            } else
+                return -1 * x;
+            }
+            else
             {
-                return x / y;
+                return x;
             }
         }
 
@@ -78,8 +79,13 @@ namespace l1
             if (x % 3 == 0 && x % 5 == 0)
             {
                 return false;
-            } else {
+            } 
+            else if (x % 3 == 0 || x % 5 == 0) 
+            {
                 return true;
+            } else
+            {
+                return false;
             }
         }
 

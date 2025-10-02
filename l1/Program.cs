@@ -10,88 +10,78 @@ namespace l1
             Class1 class1_obj = new Class1();
 
             //Вызовы методов
-            //1.1 
-            Console.WriteLine("1.1");
-            Console.Write("Введите вещественное число: ");
-            double fr_num = Convert.ToDouble(Console.ReadLine());
-            double res_fraction = Convert.ToDouble(class1_obj.Fraction(fr_num));
-            Console.WriteLine("Дробная часть числа: " + res_fraction);
+            ////1.1 
+            //Console.WriteLine("1.1");
+            //Console.Write("Введите вещественное число: ");
+            //double fr_num = Convert.ToDouble(Console.ReadLine());
+            //double res_fraction = Convert.ToDouble(class1_obj.Fraction(fr_num));
+            //Console.WriteLine("Дробная часть числа: " + res_fraction);
 
-            //1.3
-            Console.WriteLine("1.3");
-            Console.Write("Введите цифру: ");
-            char ch = Convert.ToChar(Console.ReadLine());
-            int res_char_to_num = Convert.ToInt32(class1_obj.CharToNum(ch));
-            Console.WriteLine("Цифра в int формате: " + res_char_to_num);
+            ////1.3
+            //Console.WriteLine("1.3");
+            //Console.Write("Введите цифру: ");
+            //char ch = Convert.ToChar(Console.ReadLine());
+            //int res_char_to_num = Convert.ToInt32(class1_obj.CharToNum(ch));
+            //Console.WriteLine("Цифра в int формате: " + res_char_to_num);
 
-            //1.5
-            Console.WriteLine("1.5");
-            Console.Write("Введите целое число: ");
-            int num2d = Convert.ToInt32(Console.ReadLine());
-            bool res_is2digits = Convert.ToBoolean(class1_obj.is2Digits(num2d));
-            if (res_is2digits)
-            {
-                Console.WriteLine("Число двузначное");
-            }
-            else
-            {
-                Console.WriteLine("Число не двузначное");
-            }
+            ////1.5
+            //Console.WriteLine("1.5");
+            //Console.Write("Введите целое число: ");
+            //int num2d = Convert.ToInt32(Console.ReadLine());
+            //bool res_is2digits = Convert.ToBoolean(class1_obj.is2Digits(num2d));
+            //if (res_is2digits)
+            //{
+            //    Console.WriteLine("Число двузначное");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Число не двузначное");
+            //}
 
-            //1.7
-            Console.WriteLine("1.7");
-            Console.Write("Введите границу диапазона(целое число): ");
-            int a = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите вторую границу диапазона(целое число): ");
-            int b = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите целое число для проверки вхождения в диапазон: ");
-            int num = Convert.ToInt32(Console.ReadLine());
+            ////1.7
+            //Console.WriteLine("1.7");
+            //Console.Write("Введите границу диапазона(целое число): ");
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Введите вторую границу диапазона(целое число): ");
+            //int b = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Введите целое число для проверки вхождения в диапазон: ");
+            //int num = Convert.ToInt32(Console.ReadLine());
 
-            bool res_range = Convert.ToBoolean(class1_obj.isInRange(a, b, num));
-            if (res_range)
-            {
-                Console.WriteLine("Число входит в заданный диапазон");
-            }
-            else
-            {
-                Console.WriteLine("Число не входит в заданный диапазон");
-            }
+            //bool res_range = Convert.ToBoolean(class1_obj.isInRange(a, b, num));
+            //if (res_range)
+            //{
+            //    Console.WriteLine("Число входит в заданный диапазон");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Число не входит в заданный диапазон");
+            //}
 
-            //1.9
-            Console.WriteLine("1.9");
-            Console.Write("Введите первое целое число: ");
-            int x = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите второе целое число: ");
-            int y = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите третье целое число: ");
-            int z = Convert.ToInt32(Console.ReadLine());
+            ////1.9
+            //Console.WriteLine("1.9");
+            //Console.Write("Введите первое целое число: ");
+            //int x = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Введите второе целое число: ");
+            //int y = Convert.ToInt32(Console.ReadLine());
+            //Console.Write("Введите третье целое число: ");
+            //int z = Convert.ToInt32(Console.ReadLine());
 
-            bool res_equal = Convert.ToBoolean(class1_obj.isInRange(x, y, z));
-            if (res_equal is true)
-            {
-                Console.WriteLine("Числа равны");
-            }
-            else
-            {
-                Console.WriteLine("Числа не равны");
-            }
+            //bool res_equal = Convert.ToBoolean(class1_obj.isEqual(x, y, z));
+            //if (res_equal)
+            //{
+            //    Console.WriteLine("Числа равны");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Числа не равны");
+            //}
 
-            //2.1
-            Console.WriteLine("2.1");
-            Console.Write("Введите делимое(целое число): ");
-            int dividend = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите делитель(целое число): ");
-            int divider = Convert.ToInt32(Console.ReadLine());
+            ////2.1
+            //Console.WriteLine("2.1");
+            //Console.Write("Введите целое число для получения его модуля: ");
+            //int num_abs = Convert.ToInt32(Console.ReadLine());
 
-            int res_safe_div = Convert.ToInt32(class1_obj.safeDiv(dividend, divider));
-            if (res_safe_div == 0)
-            {
-                Console.WriteLine(res_safe_div);
-            }
-            else
-            {
-                Console.WriteLine("Частное: " + res_safe_div);
-            }
+            //Console.WriteLine(class1_obj.abs(num_abs));
 
             //2.3
             Console.WriteLine("2.3");
@@ -99,14 +89,7 @@ namespace l1
             int num35 = Convert.ToInt32(Console.ReadLine());
 
             bool res_35 = Convert.ToBoolean(class1_obj.is35(num35));
-            if (res_35 is true)
-            {
-                Console.WriteLine("Число " + num35 + " делится или на 3 или на 5");
-            }
-            else
-            {
-                Console.WriteLine("Число " + num35 + " делится на 3 и на 5 одновременно");
-            }
+            Console.WriteLine(res_35);
 
             //2.5
             Console.WriteLine("2.5");
