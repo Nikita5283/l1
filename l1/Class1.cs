@@ -9,7 +9,7 @@ namespace l1
 {
     internal class Class1
     {
-        //1.1 Отбрасывание целой части числа
+        //1.1 Вывод дробной части числа
         public double Fraction(double x)
         {
             return x - Convert.ToInt32(x);
@@ -26,9 +26,10 @@ namespace l1
         //1.5 Проверка числа на двузначность
         public bool is2Digits(int x)
         {
-            if (x > 9 && x < 100) {
+            if ((x > 9 && x < 100) || (x < -9 && x > -100)){
                 return true;
-            } else
+            } 
+            else
             {
                 return false;   
             }
@@ -42,7 +43,8 @@ namespace l1
             if (num >= a && num <= b)
             {
                 return true;
-            } else
+            } 
+            else
             {
                 return false;
             }
@@ -54,7 +56,8 @@ namespace l1
             if (a == b && b == c)
             {
                 return true;
-            } else
+            }
+            else
             {
                 return false;
             }
@@ -83,7 +86,8 @@ namespace l1
             else if (x % 3 == 0 || x % 5 == 0) 
             {
                 return true;
-            } else
+            } 
+            else
             {
                 return false;
             }
@@ -98,7 +102,8 @@ namespace l1
             }
             else if (y >= x && y >= z) {
                 return y;
-            } else
+            }
+            else
             {
                 return z;
             }
@@ -111,7 +116,8 @@ namespace l1
             if (sum >= 10 && sum <= 19)
             {
                 return 20;
-            } else
+            } 
+            else
             {
                 return sum;
             }
@@ -159,10 +165,11 @@ namespace l1
         public int numLen(long x)
         {
             int len = 0;
+            long y = Math.Abs(x);
 
-            while (x > 0)
+            while (y > 0)
             {
-                x = Convert.ToInt64(x / 10);
+                y = Convert.ToInt64(y / 10);
                 len += 1;
             }
             return len;

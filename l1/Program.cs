@@ -161,15 +161,22 @@ namespace l1
 
             //4.1
             Console.WriteLine("4.1");
-            Console.WriteLine("Сгенерированный массив: ");
+            
 
             int[] nums = new int[7];
-            Random random = new Random();
             for (int i = 0; i < nums.Length; i++)
             {
-                nums[i] = random.Next(100);
-                Console.Write(nums[i] + " ");
+                Console.Write("Введите эл-т массива по индексу " + i + ": ");
+                nums[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            Console.WriteLine("Массив: ");
+
+            foreach (int el in nums)
+            {
+                Console.Write(el + " ");
+            }
+
             Console.WriteLine();
 
             Console.Write("Введите целое число для нахождения его индекса в сгенерированном массиве: ");
@@ -180,40 +187,53 @@ namespace l1
 
             //4.3
             Console.WriteLine("4.3");
-            Console.WriteLine("Сгенерированный массив: ");
-
             int[] nums2 = new int[7];
-            Random random2 = new Random();
             for (int i = 0; i < nums2.Length; i++)
             {
-                nums2[i] = random2.Next(-10, 5);
-                Console.Write(nums2[i] + " ");
+                Console.Write("Введите эл-т массива по индексу " + i + ": ");
+                nums2[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            Console.WriteLine("Массив: ");
+
+            foreach (int el in nums2)
+            {
+                Console.Write(el + " ");
+            }
+
             Console.WriteLine();
 
             Console.WriteLine("Максимальное по модулю число в массиве: " + class1_obj.maxAbs(nums2));
 
             //4.5
             Console.WriteLine("4.5");
-            Console.WriteLine("Массив arr: ");
-
             int[] arr = new int[7];
-            Random random3 = new Random();
             for (int i = 0; i < arr.Length; i++)
             {
-                arr[i] = random3.Next(20);
-                Console.Write(arr[i] + " ");
+                Console.Write("Введите эл-т массива по индексу " + i + ": ");
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Массив arr: ");
+
+            foreach (int el in arr)
+            {
+                Console.Write(el + " ");
             }
             Console.WriteLine();
 
-            Console.WriteLine("Массив ins: ");
-
             int[] ins = new int[7];
-            Random random4 = new Random();
             for (int i = 0; i < ins.Length; i++)
             {
-                ins[i] = random4.Next(-10, 5);
-                Console.Write(ins[i] + " ");
+                Console.Write("Введите эл-т массива по индексу " + i + ": ");
+                ins[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Массив ins: ");
+
+            foreach (int el in ins)
+            {
+                Console.Write(el + " ");
             }
             Console.WriteLine();
 
@@ -228,14 +248,20 @@ namespace l1
 
             //4.7
             Console.WriteLine("4.7");
-            Console.WriteLine("Сгенерированный массив: ");
             int[] nums3 = new int[7];
-            Random random5 = new Random();
-            for (int i = 0; i < nums3.Length; i++)
+            for (int i = 0; i < nums2.Length; i++)
             {
-                nums3[i] = random5.Next(-10, 5);
-                Console.Write(nums3[i] + " ");
+                Console.Write("Введите эл-т массива по индексу " + i + ": ");
+                nums3[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            Console.WriteLine("Массив: ");
+
+            foreach (int el in nums3)
+            {
+                Console.Write(el + " ");
+            }
+
             Console.WriteLine();
 
             Console.WriteLine("Перевернутый массив: ");
@@ -248,14 +274,20 @@ namespace l1
 
             //4.9
             Console.WriteLine("4.9");
-            Console.WriteLine("Сгенерированный массив: ");
-            int[] nums4 = new int[20];
-            Random random6 = new Random();
+            int[] nums4 = new int[7];
             for (int i = 0; i < nums4.Length; i++)
             {
-                nums4[i] = random6.Next(20);
-                Console.Write(nums4[i] + " ");
+                Console.Write("Введите эл-т массива по индексу " + i + ": ");
+                nums4[i] = Convert.ToInt32(Console.ReadLine());
             }
+
+            Console.WriteLine("Массив: ");
+
+            foreach (int el in nums4)
+            {
+                Console.Write(el + " ");
+            }
+
             Console.WriteLine();
 
             Console.Write("Введите целое число, чтобы узнать индексы его вхождения: ");
